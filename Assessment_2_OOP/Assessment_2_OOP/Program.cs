@@ -11,30 +11,44 @@ namespace Assessment_2_OOP
 
         static void Main(string[] args)
         {
+            Console.WriteLine("Welcome to ASQ - A Short Questionaire");
+            Console.WriteLine("This questionaire is made up of 20 questions");
+            Questions();
         }
         public void Questions()
         {
-            start:
+        start:
             //a couple of lines of code that will print a couple of messages on the screen also using "Environment.NewLine" to make a line break 
-            Console.WriteLine("Welcome to ASQ - A Short Questionaire");
-            Console.WriteLine("This questionaire is made up of 20 questions" + Environment.NewLine);
-            Console.WriteLine("If you would like to start the program press 1");
-            Console.WriteLine("If you would like to see instructions press 2");
-            Console.WriteLine("If you would like to quit press 3");
+            
+            Console.WriteLine("Options");
+            Console.WriteLine("If you would like to start the program  press 1");
+            Console.WriteLine("If you would like to see instructions   press 2");
+            Console.WriteLine("If you would like to see the scoreboard press 3");
+            Console.WriteLine("If you would like to quit               press 4");
         input:
             //creating variable and getting a response from user
             int option = Console.Read();
             if (option == 1)
             {
+                Console.WriteLine("Before you start");
+                Console.WriteLine("What is your name?");
+                string Name = Console.ReadLine();
                 Question1();
             }
 
             else if (option == 2)
             {
-                Console.WriteLine("");
+                Console.WriteLine("All of the questions inside of the quiz have multiple-choice answers");
+                Console.WriteLine("To answer each question just write down a number corresponding to a specific answer");
+                Console.WriteLine("BE CAREFUL! 1 Question wrong and you have to start from the beggining.");
+                Console.WriteLine("Make sure you have fun.");
                 goto start;
             }
             else if (option == 3)
+            {
+
+            }
+            else if (option == 4)
             {
                 return;
             }

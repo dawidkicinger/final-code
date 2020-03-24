@@ -8,12 +8,15 @@ namespace Assessment_2_OOP
 {
     class Program
     {
-
+        public int option;
+        public string Name;
+        public int score;
         static void Main(string[] args)
         {
+            Program p = new Program();
             Console.WriteLine("Welcome to ASQ - A Short Questionaire");
             Console.WriteLine("This questionaire is made up of 20 questions");
-            Questions();
+            p.Questions();
         }
         public void Questions()
         {
@@ -21,18 +24,19 @@ namespace Assessment_2_OOP
             //a couple of lines of code that will print a couple of messages on the screen also using "Environment.NewLine" to make a line break 
             
             Console.WriteLine("Options");
-            Console.WriteLine("If you would like to start the program  press 1");
-            Console.WriteLine("If you would like to see instructions   press 2");
-            Console.WriteLine("If you would like to see the scoreboard press 3");
-            Console.WriteLine("If you would like to quit               press 4");
+            Console.WriteLine("If you would like to start the program       press 1");
+            Console.WriteLine("If you would like to see instructions        press 2");
+            Console.WriteLine("If you would like to see the scoreboard      press 3");
+            Console.WriteLine("If you would like to quit                    press 4");
+            option = Console.Read();
         input:
             //creating variable and getting a response from user
-            int option = Console.Read();
+            
             if (option == 1)
             {
                 Console.WriteLine("Before you start");
                 Console.WriteLine("What is your name?");
-                string Name = Console.ReadLine();
+                Name = Console.ReadLine();
                 Question1();
             }
 
@@ -61,83 +65,102 @@ namespace Assessment_2_OOP
         public void Question1()
         {
 
+            score = +1;
         }
         public void Question2()
         {
 
+            score = +1;
         }
         public void Question3()
         {
 
+            score = +1;
         }
         public void Question4()
         {
 
+            score = +1;
         }
         public void Question5()
         {
 
+            score = +1;
         }
         public void Question6()
         {
 
+            score = +1;
         }
         public void Question7()
         {
 
+            score = +1;
         }
         public void Question8()
         {
 
+            score = +1;
         }
         public void Question9()
         {
 
+            score = +1;
         }
         public void Question10()
         {
 
+            score = +1;
         }
         public void Question11()
         {
 
+            score = +1;
         }
         public void Question12()
         {
 
+            score = +1;
         }
         public void Question13()
         {
 
+            score = +1;
         }
         public void Question14()
         {
 
+            score = +1;
         }
         public void Question15()
         {
 
+            score = +1;
         }
         public void Question16()
         {
 
+            score = +1;
         }
         public void Question17()
         {
 
+            score = +1;
         }
         public void Question18()
         {
 
+            score = +1;
         }
         public void Question19()
         {
 
-
+            score = +1;
         }
         public void Question20()
         {
 
+            score = +1;
         }
     }
 

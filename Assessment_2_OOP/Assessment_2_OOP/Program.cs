@@ -8,9 +8,11 @@ namespace Assessment_2_OOP
 {
     class Program
     {
-        public int option;
+        public string option;
         public string Name;
         public int score;
+        public string answer;
+        
         static void Main(string[] args)
         {
             Program p = new Program();
@@ -20,19 +22,20 @@ namespace Assessment_2_OOP
         }
         public void Questions()
         {
+            score = 0;
         start:
-            //a couple of lines of code that will print a couple of messages on the screen also using "Environment.NewLine" to make a line break 
+            //a couple of lines of code that will print a couple of messages on the screen
             
             Console.WriteLine("Options");
             Console.WriteLine("If you would like to start the program       press 1");
             Console.WriteLine("If you would like to see instructions        press 2");
             Console.WriteLine("If you would like to see the scoreboard      press 3");
             Console.WriteLine("If you would like to quit                    press 4");
-            option = Console.Read();
+            option = Console.ReadLine();
         input:
             //creating variable and getting a response from user
             
-            if (option == 1)
+            if (option == "1")
             {
                 Console.WriteLine("Before you start");
                 Console.WriteLine("What is your name?");
@@ -40,127 +43,184 @@ namespace Assessment_2_OOP
                 Question1();
             }
 
-            else if (option == 2)
+            else if (option == "2")
             {
-                Console.WriteLine("All of the questions inside of the quiz have multiple-choice answers");
                 Console.WriteLine("To answer each question just write down a number corresponding to a specific answer");
                 Console.WriteLine("BE CAREFUL! 1 Question wrong and you have to start from the beggining.");
                 Console.WriteLine("Make sure you have fun.");
                 goto start;
             }
-            else if (option == 3)
+            else if (option == "3")
             {
 
             }
-            else if (option == 4)
+            else if (option == "4")
             {
-                return;
+                Questions();
             }
             else
             {
-                Console.WriteLine("That input Is Not Valid, Try Again.");
+                Console.WriteLine("That input Is Not Valid, Try Again. ");
                 goto input;
             }
         }
         public void Question1()
         {
-
-            score = +1;
+            
+            Console.WriteLine("What is 19+21");
+            answer = Console.ReadLine();
+            if (answer == "40")
+            {
+                score = +1;
+                Question2();
+            }
+            else
+            {
+                Console.WriteLine("Answer incorrect your final score is " + score);
+                Questions();
+            }
+            
         }
         public void Question2()
         {
+            Console.WriteLine("What is pi to 4 decimal places");
+            answer = Console.ReadLine();
+            if (answer == "3.1415")
+            {
+                score = +1;
+                Question3();
+            }
+            else
+            {
+                Console.WriteLine("Answer incorrect your final score is " + score);
+                Questions();
+            }
 
-            score = +1;
         }
         public void Question3()
         {
-
-            score = +1;
+            Console.WriteLine("");
+            answer = Console.ReadLine();
+            if (answer == "")
+            {
+                score = +1;
+                Question4();
+            }
+            else
+            {
+                Console.WriteLine("Answer incorrect your final score is " + score);
+                Questions();
+            }
         }
         public void Question4()
         {
-
-            score = +1;
+            Console.WriteLine("");
+            answer = Console.ReadLine();
+            if (answer == "")
+            {
+                score = +1;
+                Question5();
+            }
+            else
+            {
+                Console.WriteLine("Answer incorrect your final score is " + score);
+                Questions();
+            }
         }
         public void Question5()
         {
-
-            score = +1;
+            Console.WriteLine("");
+            answer = Console.ReadLine();
+            if (answer == "")
+            {
+                score = +1;
+                Question6();
+            }
+            else
+            {
+                Console.WriteLine("Answer incorrect your final score is " + score);
+                Questions();
+            }
         }
         public void Question6()
         {
-
-            score = +1;
+            Console.WriteLine("");
+            answer = Console.ReadLine();
+            if (answer == "")
+            {
+                score = +1;
+                Question7();
+            }
+            else
+            {
+                Console.WriteLine("Answer incorrect your final score is " + score);
+                Questions();
+            }
         }
         public void Question7()
         {
-
-            score = +1;
+            Console.WriteLine("");
+            answer = Console.ReadLine();
+            if (answer == "")
+            {
+                score = +1;
+                Question8();
+            }
+            else
+            {
+                Console.WriteLine("Answer incorrect your final score is " + score);
+                Questions();
+            }
         }
         public void Question8()
         {
-
-            score = +1;
+            Console.WriteLine("");
+            answer = Console.ReadLine();
+            if (answer == "")
+            {
+                score = +1;
+                Question9();
+            }
+            else
+            {
+                Console.WriteLine("Answer incorrect your final score is " + score);
+                Questions();
+            }
         }
         public void Question9()
         {
-
-            score = +1;
+            Console.WriteLine("");
+            answer = Console.ReadLine();
+            if (answer == "")
+            {
+                score = +1;
+                Question10();
+            }
+            else
+            {
+                Console.WriteLine("Answer incorrect your final score is " + score);
+                Questions();
+            }
         }
         public void Question10()
         {
-
-            score = +1;
+            Console.WriteLine("");
+            answer = Console.ReadLine();
+            if (answer == "")
+            {
+                score = +1;
+                Congratulations();
+            }
+            else
+            {
+                Console.WriteLine("Answer incorrect your final score is " + score);
+                Questions();
+            }
         }
-        public void Question11()
+        public void Congratulations()
         {
-
-            score = +1;
-        }
-        public void Question12()
-        {
-
-            score = +1;
-        }
-        public void Question13()
-        {
-
-            score = +1;
-        }
-        public void Question14()
-        {
-
-            score = +1;
-        }
-        public void Question15()
-        {
-
-            score = +1;
-        }
-        public void Question16()
-        {
-
-            score = +1;
-        }
-        public void Question17()
-        {
-
-            score = +1;
-        }
-        public void Question18()
-        {
-
-            score = +1;
-        }
-        public void Question19()
-        {
-
-            score = +1;
-        }
-        public void Question20()
-        {
-
-            score = +1;
+            Console.WriteLine("Congratulations, you have completed the quiz with " + score + "points");
+            Questions();
         }
     }
 

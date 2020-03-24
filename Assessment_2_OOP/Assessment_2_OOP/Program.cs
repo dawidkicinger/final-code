@@ -18,22 +18,35 @@ namespace Assessment_2_OOP
         {   
             
             Program p = new Program();
-            Console.WriteLine("Welcome to ASQ - A Short Questionaire");
-            Console.WriteLine("This questionaire is made up of 20 questions");
-            Console.WriteLine("Questionaire Made By: Dawid Kicinger");
-            p.Questions();
+            Console.WriteLine("If you would like to start a quiz press 1");
+            Console.WriteLine("If you would like to start a file comparison press 2");
+            string option = Console.ReadLine();
+            if (option == "1")
+            {
+                p.Questions();
+            }
+            else if (option == "2")
+            {
+
+            }
+            else
+            {
+                Console.WriteLine("That input Is Not Valid, Try Again. ");
+            }
+            
         }
         public void Questions()
         {
             score = 0;
         start:
             //a couple of lines of code that will print a couple of messages on the screen
-            
+            Console.WriteLine("Welcome to ASQ - A Short Questionaire");
+            Console.WriteLine("This questionaire is made up of 20 questions");
+            Console.WriteLine("Questionaire Made By: Dawid Kicinger");
             Console.WriteLine(NewLine + "Options" + NewLine + "Make sure to press enter after you have chosen the number (every time)");
             Console.WriteLine("If you would like to start the program       press 1");
             Console.WriteLine("If you would like to see instructions        press 2");
-            Console.WriteLine("If you would like to see the scoreboard      press 3");
-            Console.WriteLine("If you would like to quit                    press 4");
+            Console.WriteLine("If you would like to quit                    press 3");
             option = Console.ReadLine();
         input:
             //creating variable and getting a response from user
@@ -56,10 +69,6 @@ namespace Assessment_2_OOP
             }
             else if (option == "3")
             {
-
-            }
-            else if (option == "4")
-            {
                 return;
             }
             else
@@ -71,12 +80,13 @@ namespace Assessment_2_OOP
         public void Question1()
         {
             
-            Console.WriteLine("What is 19+21?" + NewLine);
+            Console.WriteLine("What is 19+21?");
             Console.WriteLine("Options" + NewLine);
             Console.WriteLine("39");
             Console.WriteLine("40");
             Console.WriteLine("50");
-            Console.WriteLine("49");
+            Console.WriteLine("49" + NewLine);
+            Console.WriteLine("Type your answer here = ");
             answer = Console.ReadLine();
             if (answer == "40")
             {
@@ -86,6 +96,7 @@ namespace Assessment_2_OOP
             else
             {
                 Console.WriteLine("Answer incorrect your final score is " + score);
+                Console.WriteLine("Good Job, " + Name);
                 Questions();
             }
             
@@ -97,7 +108,8 @@ namespace Assessment_2_OOP
             Console.WriteLine("3.1415");
             Console.WriteLine("3.1514");
             Console.WriteLine("3.1417");
-            Console.WriteLine("3.1517");
+            Console.WriteLine("3.1517" + NewLine);
+            Console.WriteLine("Type your answer here = ");
             answer = Console.ReadLine();
             if (answer == "3.1415")
             {
@@ -107,6 +119,7 @@ namespace Assessment_2_OOP
             else
             {
                 Console.WriteLine("Answer incorrect your final score is " + score);
+                Console.WriteLine("Good Job, " + Name);
                 Questions();
             }
 
@@ -118,7 +131,8 @@ namespace Assessment_2_OOP
             Console.WriteLine("Boston");
             Console.WriteLine("Manchester");
             Console.WriteLine("London");
-            Console.WriteLine("Lincoln");
+            Console.WriteLine("Lincoln" + NewLine);
+            Console.WriteLine("Type your answer here = ");
             answer = Console.ReadLine();
             if (answer == "Lincoln")
             {
@@ -143,7 +157,8 @@ namespace Assessment_2_OOP
             Console.WriteLine("1996");
             Console.WriteLine("1997");
             Console.WriteLine("1998");
-            Console.WriteLine("1999");
+            Console.WriteLine("1999" + NewLine);
+            Console.WriteLine("Type your answer here = ");
             answer = Console.ReadLine();
             if (answer == "1997")
             {
@@ -153,6 +168,7 @@ namespace Assessment_2_OOP
             else
             {
                 Console.WriteLine("Answer incorrect your final score is " + score);
+                Console.WriteLine("Good Job, " + Name);
                 Questions();
             }
         }
@@ -163,7 +179,8 @@ namespace Assessment_2_OOP
             Console.WriteLine("Brain");
             Console.WriteLine("Clavicle");
             Console.WriteLine("Finger");
-            Console.WriteLine("Mandible");
+            Console.WriteLine("Mandible" + NewLine);
+            Console.WriteLine("Type your answer here = ");
             answer = Console.ReadLine();
             if (answer == "Clavicle")
             {
@@ -178,6 +195,7 @@ namespace Assessment_2_OOP
             else
             {
                 Console.WriteLine("Answer incorrect your final score is " + score);
+                Console.WriteLine("Good Job, " + Name);
                 Questions();
             }
         }
@@ -188,7 +206,8 @@ namespace Assessment_2_OOP
             Console.WriteLine("White and Red");
             Console.WriteLine("Hawk");
             Console.WriteLine("Bear");
-            Console.WriteLine("Eagle");
+            Console.WriteLine("Eagle" + NewLine);
+            Console.WriteLine("Type your answer here = ");
 
             answer = Console.ReadLine();
             if (answer == "Eagle")
@@ -204,6 +223,7 @@ namespace Assessment_2_OOP
             else
             {
                 Console.WriteLine("Answer incorrect your final score is " + score);
+                Console.WriteLine("Good Job, " + Name);
                 Questions();
             }
         }
@@ -214,7 +234,8 @@ namespace Assessment_2_OOP
             Console.WriteLine("Pasta");
             Console.WriteLine("Noodles");
             Console.WriteLine("Rice");
-            Console.WriteLine("Salad");
+            Console.WriteLine("Salad" + NewLine);
+            Console.WriteLine("Type your answer here = ");
             answer = Console.ReadLine();
             if (answer == "Rice")
             {
@@ -229,6 +250,7 @@ namespace Assessment_2_OOP
             else
             {
                 Console.WriteLine("Answer incorrect your final score is " + score);
+                Console.WriteLine("Good Job, " + Name);
                 Questions();
             }
         }
@@ -239,7 +261,8 @@ namespace Assessment_2_OOP
             Console.WriteLine("Cake");
             Console.WriteLine("Bread");
             Console.WriteLine("Wheat");
-            Console.WriteLine("Kebab");
+            Console.WriteLine("Kebab" + NewLine);
+            Console.WriteLine("Type your answer here = ");
             answer = Console.ReadLine();
             if (answer == "Bread")
             {
@@ -254,6 +277,7 @@ namespace Assessment_2_OOP
             else
             {
                 Console.WriteLine("Answer incorrect your final score is " + score);
+                Console.WriteLine("Good Job, " + Name);
                 Questions();
             }
         }
@@ -264,7 +288,8 @@ namespace Assessment_2_OOP
             Console.WriteLine("Italy");
             Console.WriteLine("Poland");
             Console.WriteLine("England");
-            Console.WriteLine("Bulgaria");
+            Console.WriteLine("Bulgaria" + NewLine);
+            Console.WriteLine("Type your answer here = ");
             answer = Console.ReadLine();
             if (answer == "Italy")
             {
@@ -279,6 +304,7 @@ namespace Assessment_2_OOP
             else
             {
                 Console.WriteLine("Answer incorrect your final score is " + score);
+                Console.WriteLine("Good Job, " + Name);
                 Questions();
             }
         }
@@ -304,13 +330,18 @@ namespace Assessment_2_OOP
             else
             {
                 Console.WriteLine("Answer incorrect your final score is " + score);
+                Console.WriteLine("Good Job, " + Name);
                 Questions();
             }
         }
         public void Congratulations()
         {
-            Console.WriteLine("Congratulations, you have completed the quiz with " + score + "points");
+            Console.WriteLine("Congratulations " + Name + " , you have completed the quiz with " + score + "points");
             Questions();
+        }
+        public void CheckFiles()
+        {
+            
         }
     }
 

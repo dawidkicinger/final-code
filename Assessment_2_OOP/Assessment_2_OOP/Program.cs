@@ -8,14 +8,16 @@ namespace Assessment_2_OOP
 {
     class Program
     {
-        //implementing variable to make new line break everytime, to make getting a break easier and faster
-        public string NewLine = Environment.NewLine;
+
         static void Main(string[] args)
         {
-        start:
-            //a couple of lines of code that will print a couple of messages on the screen also variable "NewLine" is used to make a line break 
+        }
+        public void Questions()
+        {
+            start:
+            //a couple of lines of code that will print a couple of messages on the screen also using "Environment.NewLine" to make a line break 
             Console.WriteLine("Welcome to ASQ - A Short Questionaire");
-            Console.WriteLine("This questionaire is made up of 20 questions" + NewLine);
+            Console.WriteLine("This questionaire is made up of 20 questions" + Environment.NewLine);
             Console.WriteLine("If you would like to start the program press 1");
             Console.WriteLine("If you would like to see instructions press 2");
             Console.WriteLine("If you would like to quit press 3");
@@ -26,6 +28,7 @@ namespace Assessment_2_OOP
             {
                 Question1();
             }
+
             else if (option == 2)
             {
                 Console.WriteLine("");

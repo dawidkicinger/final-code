@@ -25,7 +25,7 @@ namespace Assessment_2_OOP
             }
             else if (option == "2")
             {
-
+                p.CheckFiles();
             }
             else
             {

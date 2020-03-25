@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace Assessment_2_OOP
 {
     class Program
     {   
+        //a couple of variables that I am going to use throughout the program, and I have added one variable to make NewLine(to simplify command and to reduce amount of repetition of long command)
         public string NewLine = Environment.NewLine;
         public string option;
         public string Name;
@@ -15,8 +13,8 @@ namespace Assessment_2_OOP
         public string answer;
         
         static void Main(string[] args)
-        {   
-            
+        {
+            Console.ForegroundColor = ConsoleColor.White;
             Program p = new Program();
             Console.WriteLine("If you would like to start a quiz press 1");
             Console.WriteLine("If you would like to start a file comparison press 2");
@@ -41,7 +39,7 @@ namespace Assessment_2_OOP
         start:
             //a couple of lines of code that will print a couple of messages on the screen
             Console.WriteLine("Welcome to ASQ - A Short Questionaire");
-            Console.WriteLine("This questionaire is made up of 20 questions");
+            Console.WriteLine("This questionaire is made up of 10 questions");
             Console.WriteLine("Questionaire Made By: Dawid Kicinger");
             Console.WriteLine(NewLine + "Options" + NewLine + "Make sure to press enter after you have chosen the number (every time)");
             Console.WriteLine("If you would like to start the program       press 1");
@@ -49,14 +47,14 @@ namespace Assessment_2_OOP
             Console.WriteLine("If you would like to quit                    press 3");
             option = Console.ReadLine();
         input:
-            //creating variable and getting a response from user
+            
             
             if (option == "1")
             {
                 Console.WriteLine("Before you start");
                 Console.WriteLine("What is your name?");
                 Name = Console.ReadLine();
-                Question1();
+                ////Question1();
             }
 
             else if (option == "2")
@@ -341,8 +339,39 @@ namespace Assessment_2_OOP
         }
         public void CheckFiles()
         {
-            
+            string file1 = File.ReadAllText(@"GitRepositories_1a.txt"); 
+            string file2 = File.ReadAllText(@"GitRepositories_1b.txt");
+            string file3 = File.ReadAllText(@"GitRepositories_2a.txt");
+            string file4 = File.ReadAllText(@"GitRepositories_2b.txt");
+            string file5 = File.ReadAllText(@"GitRepositories_3a.txt");
+            string file6 = File.ReadAllText(@"GitRepositories_3b.txt");
+            if(string.Equals(file1, file2))
+            {
+                Console.WriteLine("GitRepositories_1a and GitRepositories_1b are not different");
+            }
+            else
+            {
+                Console.WriteLine("GitRepositories_1a and GitRepositories_1b are different");
+            }
+            if (string.Equals(file3, file4))
+            {
+                Console.WriteLine("GitRepositories_2a and GitRepositories_2b are not different");
+            }
+            else
+            {
+                Console.WriteLine("GitRepositories_2a and GitRepositories_2b are different");
+            }
+            if (string.Equals(file5, file6))
+            {
+                Console.WriteLine("GitRepositories_3a and GitRepositories_3b are not different");
+            }
+            else
+            {
+                Console.WriteLine("GitRepositories_3a and GitRepositories_3b are different");
+            }
+            Questions();
         }
+        
     }
 
 }

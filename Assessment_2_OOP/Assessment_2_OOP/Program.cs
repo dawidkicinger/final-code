@@ -14,11 +14,12 @@ namespace Assessment_2_OOP
         
         static void Main(string[] args)
         {
-            Console.ForegroundColor = ConsoleColor.White;
+            //local variable made and some lines of code asking what the user wants to do
             Program p = new Program();
             Console.WriteLine("If you would like to start a quiz press 1");
             Console.WriteLine("If you would like to start a file comparison press 2");
             string option = Console.ReadLine();
+            //if 1 is pressed will go to the questionaire if 2 pressed will check files
             if (option == "1")
             {
                 p.Questions();
@@ -48,13 +49,13 @@ namespace Assessment_2_OOP
             option = Console.ReadLine();
         input:
             
-            
+            //if 1 pressed program will start, if 2 pressed instuctions will be shown if 3 pressed the program will quit
             if (option == "1")
             {
                 Console.WriteLine("Before you start");
                 Console.WriteLine("What is your name?");
                 Name = Console.ReadLine();
-                ////Question1();
+                Question1();
             }
 
             else if (option == "2")
@@ -76,6 +77,7 @@ namespace Assessment_2_OOP
             }
         }
         public void Question1()
+            //This code repeats the same 10 times, it will print some lines of code letting the user know the question and options availabe, it will then ask for an answer and will then check if answer is the same as it should be if it is it will go to next question otherwise, it will send you to the Questions() function
         {
             
             Console.WriteLine("What is 19+21?");
@@ -88,6 +90,7 @@ namespace Assessment_2_OOP
             answer = Console.ReadLine();
             if (answer == "40")
             {
+                //for each of the answer correct it will add 1 point on to the score
                 score = +1;
                 Question2();
             }
@@ -338,6 +341,7 @@ namespace Assessment_2_OOP
             Questions();
         }
         public void CheckFiles()
+            //this is checking for files, comparing them and then letting the user know if they are the same or different
         {
             string file1 = File.ReadAllText(@"GitRepositories_1a.txt"); 
             string file2 = File.ReadAllText(@"GitRepositories_1b.txt");
@@ -367,7 +371,7 @@ namespace Assessment_2_OOP
             }
             else
             {
-                Console.WriteLine("GitRepositories_3a and GitRepositories_3b are different");
+                Console.WriteLine("GitRepositories_3a and GitRepositories_3b are different"  + NewLine);
             }
             Questions();
         }

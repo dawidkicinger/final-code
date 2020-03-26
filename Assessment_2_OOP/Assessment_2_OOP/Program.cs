@@ -11,7 +11,7 @@ namespace Assessment_2_OOP
         
         static void Main(string[] args)
         {
-            //local variable made and some lines of code asking what the user wants to do
+            //local variable made and some lines of code asking what the user wants to do and a bit of code telling the user what the program is then going to function CheckFiles()
             Program p = new Program();
             Console.WriteLine("Welcome to File checker");
             p.CheckFiles();
@@ -19,7 +19,7 @@ namespace Assessment_2_OOP
         }
 
         public void CheckFiles()
-        //this is checking for files, comparing them and then letting the user know if they are the same or different
+        //this is checking for user input, if it is a "yes" it will check if the files are the same, if it is "no" it will quit.
         {
             Console.WriteLine("Would you like to start the program?" + NewLine);
             Console.WriteLine("Options");
@@ -45,6 +45,7 @@ namespace Assessment_2_OOP
         }
         public void CheckingFiles()
         {
+            // some variables with txt files and then the code checking if they are the same and outputs it to the user then loops back to function CheckFiles()
             string file1 = File.ReadAllText(@"GitRepositories_1a.txt"); 
             string file2 = File.ReadAllText(@"GitRepositories_1b.txt");
             string file3 = File.ReadAllText(@"GitRepositories_2a.txt");

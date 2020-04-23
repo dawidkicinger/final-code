@@ -51,13 +51,14 @@ namespace Assessment_2_OOP
         public void CheckingFiles()
         {
             // some variables with txt files and then the code checking if they are the same and outputs it to the user then loops back to function CheckFiles()
-            string file1 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_1a.txt"); 
-            string file2 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_1b.txt");
-            string file3 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_2a.txt");
-            string file4 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_2b.txt");
-            string file5 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_3a.txt");
-            string file6 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_3b.txt");
-            if(string.Equals(file1, file2))
+            string GitRespositories_1a = System.IO.File.ReadAllText("\\GitRepositories_7a.txt"); 
+            string GitRespositroeis_1b = System.IO.File.ReadAllText("GitRepositories_1b.txt");
+            string GitRespositroeis_2a = System.IO.File.ReadAllText("GitRepositories_2a.txt");
+            string GitRespositroeis_2b = System.IO.File.ReadAllText("GitRepositories_2b.txt");
+            string GitRespositroeis_3a = System.IO.File.ReadAllText("GitRepositories_3a.txt");
+            string GitRespositroeis_3b = System.IO.File.ReadAllText("GitRepositories_3b.txt");
+            if(string.Equals(GitRespositories_1a, GitRespositroeis_1b))
+
             {
                 Console.WriteLine("GitRepositories_1a and GitRepositories_1b are not different");
             }
@@ -65,7 +66,7 @@ namespace Assessment_2_OOP
             {
                 Console.WriteLine("GitRepositories_1a and GitRepositories_1b are different");
             }
-            if (string.Equals(file3, file4))
+            if (string.Equals(GitRespositroeis_2a, GitRespositroeis_2b))
             {
                 Console.WriteLine("GitRepositories_2a and GitRepositories_2b are not different");
             }
@@ -73,7 +74,7 @@ namespace Assessment_2_OOP
             {
                 Console.WriteLine("GitRepositories_2a and GitRepositories_2b are different");
             }
-            if (string.Equals(file5, file6))
+            if (string.Equals(GitRespositroeis_3a, GitRespositroeis_3b))
             {
                 Console.WriteLine("GitRepositories_3a and GitRepositories_3b are not different");
             }

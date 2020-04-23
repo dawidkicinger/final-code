@@ -42,16 +42,21 @@ namespace Assessment_2_OOP
             {
                 return;
             }
+            else
+            {
+                Console.WriteLine("Incorrect Input, " + NewLine + "try again." + NewLine);
+                CheckFiles();
+            }
         }
         public void CheckingFiles()
         {
             // some variables with txt files and then the code checking if they are the same and outputs it to the user then loops back to function CheckFiles()
-            string file1 = File.ReadAllText(@"GitRepositories_1a.txt"); 
-            string file2 = File.ReadAllText(@"GitRepositories_1b.txt");
-            string file3 = File.ReadAllText(@"GitRepositories_2a.txt");
-            string file4 = File.ReadAllText(@"GitRepositories_2b.txt");
-            string file5 = File.ReadAllText(@"GitRepositories_3a.txt");
-            string file6 = File.ReadAllText(@"GitRepositories_3b.txt");
+            string file1 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_1a.txt"); 
+            string file2 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_1b.txt");
+            string file3 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_2a.txt");
+            string file4 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_2b.txt");
+            string file5 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_3a.txt");
+            string file6 = File.ReadAllText(@"Assessment_2_OOP/Assessment_2_OOP/GitRepositories_3b.txt");
             if(string.Equals(file1, file2))
             {
                 Console.WriteLine("GitRepositories_1a and GitRepositories_1b are not different");
